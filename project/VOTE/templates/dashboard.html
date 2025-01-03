@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Election</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        a {
+        	    color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-align: left;
+            padding: 10px 15px;
+        }
+
+        a:hover {
+            background-color: silver;
+            color: black;
+        }
+
+        header{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .candidate {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .candidate h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .candidate p {
+            color: #555;
+        }
+
+        .vote-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .vote-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="{% url 'studentview' %}">Student</a>
+    <a href="{% url 'students' %}">List</a>
+    <a href="{% url 'candidatesregister' %}">Candidates</a>
+    <h1>College Election 2024</h1>
+    <p>Cast your vote for the future of our college!</p>
+</header>
+
+<section>
+    <div class="candidate">
+        <h3>Muhammed Sanih-CHAIRMAN</h3>
+        <img src="http://127.0.0.1:8000/static/img/S.jpeg" alt="Candidate 2" width="25%" height="25%"><br>
+        <button class="vote-button" onclick="alert('You voted for Muhammed Sanih')">Vote for Muhammed Sanih</button>
+        <h3>Muhammed Sanih-CHAIRMAN</h3>
+        <img src="http://127.0.0.1:8000/static/img/S.jpeg" alt="Candidate 2" width="25%" height="25%"><br>
+        <button class="vote-button" onclick="alert('You voted for Muhammed Sanih')">Vote for Muhammed Sanih</button>
+    </div>
+
+    <div class="candidate">
+        <h3>Muhammed Mijas - Vice CHAIRMAN</h3>
+        <img src="http://127.0.0.1:8000/static/img/M.jpeg" sizes="10"  alt="Candidate 1" width="25%" height="25%"><br>
+        <button class="vote-button" onclick="alert('You voted for Muhammed Mijas')">Vote for Muhammed Mijas</button>
+    </div>
+
+    <div class="candidate">
+        <h3>Muhammed Safwan - General SECRETARY</h3>
+        <button class="vote-button" onclick="alert('You voted for Muhammed Safwan')">Vote for Muhammed Safwan</button>
+    </div>
+</section>
+
+<footer>
+    <p style="text-align: center; padding: 10px; background-color: #333; color: white;">
+        © 2024 College Election. All Rights Reserved.
+    </p>
+</footer>
+
+</body>
+</html>

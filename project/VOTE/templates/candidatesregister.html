@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Candidate</title>
+    <!-- Bootstrap CSS for styling the form -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], select, input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Candidate Registration</h1>
+        <form method="POST" enctype="multipart/form-data"> <!-- Make sure to include enctype -->
+            {% csrf_token %}
+            
+            <!-- Render form fields dynamically -->
+            <div class="form-group">
+                <label for="{{ form.first_name.id_for_label }}">First Name</label>
+                {{ form.first_name }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.last_name.id_for_label }}">Last Name</label>
+                {{ form.last_name }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.department.id_for_label }}">Department</label>
+                {{ form.department }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.batch.id_for_label }}">Batch</label>
+                {{ form.batch }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.image.id_for_label }}">Profile Picture</label>
+                {{ form.image }}  <!-- This will render the file input for image -->
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.position.id_for_label }}">Position</label>
+                {{ form.position }}  <!-- This will render the dropdown for position -->
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Register Candidate</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (optional, for any dynamic features you may want to add later) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

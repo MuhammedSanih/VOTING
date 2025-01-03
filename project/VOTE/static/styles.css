@@ -1,0 +1,161 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: rgb(60, 120, 134)
+    padding: 20px 0;
+}
+
+header .logo {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header nav a:hover {
+    background-color: silver;
+    color: black;
+}
+
+/* Main Banner */
+.main-banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.main-banner .cta-btn {
+    background-color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.main-banner .cta-btn:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Section Styles */
+.section {
+    padding: 50px 0;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.candidates {
+    background-image: url('http://127.0.0.1:8000/static/img/R.jpg');
+    display: flex;
+    justify-content: space-around;
+}
+
+.candidate {
+    text-align: center;
+    width: 45%;
+}
+
+.candidate img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #0056b3;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #004494;
+}
+
+.event {
+    margin-bottom: 30px;
+}
+
+form input,
+form textarea {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: #0056b3;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #004494;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-links a:hover {
+    color: #ff5733;
+}
+a.active {
+    font-weight: bold;
+    color: white; 
+    text-decoration: none; 
+}

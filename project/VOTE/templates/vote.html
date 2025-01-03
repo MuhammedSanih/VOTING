@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Election 2024</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body background="static/img/NAM.jpg" style=" background-size: cover;background-position: center;height: 100dvh; " >
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo"><center>College Election</center></div>
+            <img src="static/img/logo.png" width="50px" height="50px" type="image/png">
+            <br>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="{% url 'candidatesview' %}">Candidates</a></li>
+                    <li><a href="{% url 'votingview' %}">Voting</a></li>
+                    <li><a href="{% url 'roview' %}">RO</a></li>
+                </ul>
+            </nav>
+            <br>
+        </div>
+    </header>
+
+    <!-- Main Banner -->
+    <section id="home" class="main-banner">
+        <div class="container">
+            <br>
+            <br>
+            <h1>Welcome to NAM  College Election 2024</h1>
+            <p>Make your voice heard! Learn about candidates and cast your vote.</p>
+            <br>
+            <br>
+            <a href="#voting" class="cta-btn">Vote Now</a>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need help, feel free to reach out.</p>
+            <br>
+            <form id="contact-form" action="submit-contact" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <br>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <br>
+            <br>
+        </div>
+        <div class="container">
+            <p>&copy; 2024 College Election | All Rights Reserved</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

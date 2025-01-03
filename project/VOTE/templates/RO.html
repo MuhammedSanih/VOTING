@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Election 2024</title>
+    <link rel="stylesheet" href="http://127.0.0.1:8000/static/login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="logo"><center>College Election</center></div>
+            <br>
+            <br>
+            <br>
+            <img src="http://127.0.0.1:8000/static/img/logo.png" width="50px" height="50px" type="image/png">
+            <br>
+            <nav>
+                <ul><br>
+                    <li><a href="{% url 'voteview' %}">Home</a></li>
+                    <li><a href="{% url 'candidatesview' %}" >Candidates</a></li>
+                    <li><a href="{% url 'votingview' %}">Voting</a></li>
+                    <li><a href="#"  class="active">RO</a></li>
+                </ul>
+            </nav>
+            <br>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <br>
+    <br>
+    <br>
+    <section id="ro" class="section">
+        <div class="container">
+            <div class="screen">
+                <div class="screen__content">
+                    <!-- Login Form -->
+                    <form class="login" method="POST">
+                        {% csrf_token %}
+                        <!-- Show error messages if any -->
+                        {% if messages %}
+                            <div class="alert">
+                                <ul>
+                                    {% for message in messages %}
+                                        <li>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        <!-- Username input -->
+                        <div class="login__field">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="text" class="login__input" name="username" placeholder="User name / Email" required>
+                        </div>
+                        <!-- Password input -->
+                        <div class="login__field">
+                            <i class="login__icon fas fa-lock"></i>
+                            <input type="password" class="login__input" name="password" placeholder="Password" required>
+                        </div>
+                        <!-- Submit button -->
+                        <button class="button login__submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                        </button>				
+                    </form>
+                    <!-- Social login options (optional) -->
+                    <div class="social-login">
+                        <h3>Log in via</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-login__icon fab fa-instagram"></a>
+                            <a href="#" class="social-login__icon fab fa-facebook"></a>
+                            <a href="#" class="social-login__icon fab fa-twitter"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="screen__background">
+                    <span class="screen__background__shape screen__background__shape4"></span>
+                    <span class="screen__background__shape screen__background__shape3"></span>		
+                    <span class="screen__background__shape screen__background__shape2"></span>
+                    <span class="screen__background__shape screen__background__shape1"></span>
+                </div>		
+            </div>
+        </div>
+    </section>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 College Election | All Rights Reserved</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
